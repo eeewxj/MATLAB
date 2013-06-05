@@ -1,0 +1,82 @@
+clear;clc;
+format long e
+% Constant
+c_const = 299792458e-12;        % speed of light m/ps
+tol = 1e-5;
+% Fiber Length
+dz = 1;                   % distance stepsize (m)
+nz = 40;                     % number of z-steps
+
+% Time parameters:
+n = 2^7;                   % number of samples in a time period (/ps)
+num = 2^8;                  % observed time period number (ps)
+N = n*num;                  % Total sampling points
+Ts = 1/n;                   % sampling distance (ps)
+t = ((1:N)'-(N+1)/2)*Ts;    % vector of t values (ps)
+
+% Frequency parameters:
+dv = 1/num;                                % frequency resolution (THz)
+v = [(0:N/2-1),(-N/2:-1)]'/(Ts*N);          % vector of v values (THz)
+vs = fftshift(v);                           % swap halves for plotting 
+
+% Wavelength parameters:
+lamda0 = 1064.0e-9;         % zero-dispersion wavelength (m)
+lamdaS = 1064.0e-9;         % signal wavelength (m)
+lamdaP = 1064.3e-9;         % pump wavelength (m)
+vw = flipud((c_const./(vs + c_const/lamda0))*1e9);  % wavelengths vector (nm)
+
+% singal and pump power:
+Is =1e-9;                	 % signal power (W)
+Ip = 80;                     % pump power (W)
+
+% Optical carrier
+deltavS = c_const/lamdaS-c_const/lamda0;                    % THz
+[~,aux1b] = min(abs(v - deltavS));
+CarrierS = exp(-1j*2*pi*v(aux1b)*t);
+deltavP = c_const/lamdaP-c_const/lamda0;                    % THz
+[~,aux2b] = min(abs(v - deltavP));
+CarrierP = exp(-1j*2*pi*v(aux2b)*t);
+beta = [0 0 8.19e-6 0*6.17e-5  -7.41e-8 -1.54e-11];            % ps^n/m
+% Coupled together
+u0 = sechpulse(t,0,15,1,8.95);
+%u0 = gaussian(t,0,15,1,0)
+%u0 = 1;
+Ep = sqrt(Ip).*CarrierP.*u0;
+Es = wgn(N,1,-40,'complex').*CarrierS;
+Ein = Es + Ep;
+
+% Transmission in HNL-DSF or PCF
+fprintf(1,'\n\nSimulation started');
+fprintf(1,'\n\nplot');
+nplot = 1;
+u = zeros(N,nplot+1);
+ufourier = zeros(N,nplot+1);
+u(:,1) = Ein;
+tic
+for ii = 1:nplot
+    fprintf('\b\b\b\b%4.0f', ii);
+    ufourier(:,ii) = fftshift(abs((ifft(u(:,ii))*N).^2/N^2));   
+    u(:,ii+1) = ssrklem(u(:,ii),Ts,dz,dz*nz/nplot,1e-6,beta,1.5e-2,0*lamda0/c_const,tol);
+end
+ufourier(:,nplot+1) = fftshift(abs((ifft(u(:,ii))*N).^2/N^2));   
+
+tx = toc;
+fprintf('\n\nSimulation lasted (s) = %5.2f',tx);
+
+Eout = u(:,nplot+1);
+spectraOUT = flipud((abs(fftshift(ifft(Eout)*N)).^2)/N^2);	% W
+S_dBm = 10*log10(spectraOUT);
+
+figure(1);
+plot(vw,S_dBm,'b');
+axis([vw(1) vw(N) -100 0]);
+xlabel('Wavelength (nm)');
+ylabel('Intensity (dBm)');
+title_string = ['\lambda_p=',num2str(lamdaP*1e9,'%5.1fnm'),...
+    ',L=',num2str(dz*nz,'%3.0fm'),...
+    ',P_p_e_a_k=',num2str(Ip,'%2.0fW'),...
+    ',tol=',num2str(tol,'%1.0e')];
+title (title_string);
+% figure(2);
+% plot(t,abs(Eout).^2)
+% title (title_string);

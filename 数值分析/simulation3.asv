@@ -1,0 +1,17 @@
+clear all;
+clc;
+T = zero(1,1e4);
+for i = 1:1e4
+    N = randi(100,1,1e4);
+    con = zeros(1,100);
+    j=0;
+    while sum(con)<100
+        j=j+1;
+        if con(N(j))==1
+        else
+           con(N(j)) = 1;
+         end
+    end
+    T(i) = ;    
+end
+disp(T/1e4);

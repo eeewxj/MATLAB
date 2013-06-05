@@ -1,0 +1,2591 @@
+Model {
+  Name			  "DynamicEDFAs"
+  Version		  4.00
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowStorageClass	  off
+  ExecutionOrder	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  BlockNameDataTip	  on
+  BlockParametersDataTip  on
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Tue Mar 02 10:23:17 2004"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Andres"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Thu Mar 18 14:52:20 2004"
+  ModelVersionFormat	  "1.%<AutoIncrement:165>"
+  ConfigurationManager	  "None"
+  SimParamPage		  "Solver"
+  StartTime		  "0.0"
+  StopTime		  "0.0005"
+  SolverMode		  "Auto"
+  Solver		  "FixedStepDiscrete"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  Refine		  "1"
+  MaxStep		  "auto"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "0.0000005"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  LimitDataPoints	  on
+  MaxDataPoints		  "100000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  SingleTaskRateTransMsg  "none"
+  MultiTaskRateTransMsg	  "error"
+  IntegerOverflowMsg	  "warning"
+  CheckForMatrixSingularity "none"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  InvalidFcnCallConnMsg	  "error"
+  SignalLabelMismatchMsg  "none"
+  LinearizationMsg	  "none"
+  VectorMatrixConversionMsg "none"
+  SfunCompatibilityCheckMsg "none"
+  BlockPriorityViolationMsg "warning"
+  ArrayBoundsChecking	  "none"
+  ConsistencyChecking	  "none"
+  ZeroCross		  on
+  Profile		  off
+  SimulationMode	  "normal"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWOptions		  "-aEnforceIntegerDowncast=1 -aExtMode=0 -aFoldNonRol"
+"ledExpr=1 -aForceParamTrailComments=0 -aGenerateComments=1 -aIgnoreCustomStor"
+"ageClasses=0 -aIncHierarchyInIds=0 -aInlineInvariantSignals=0 -aLocalBlockOut"
+"puts=1 -aLogVarNameModifier=\"rt_\" -aRTWVerbose=1 -aRollThreshold=5 -aShowEl"
+"iminatedStatements=1"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  ParameterPooling	  on
+  BlockReductionOpt	  on
+  RTWExpressionDepthLimit 5
+  BooleanDataType	  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "DynamicEDFAs"
+    Location		    [88, 160, 971, 694]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    212
+    ScreenColor		    "automatic"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Constant
+      Name		      "Alfa (1/m)"
+      Position		      [15, 231, 175, 259]
+      Value		      "[0.202, 0.251, 0.186]"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Alfa ASE(1/m)"
+      Position		      [15, 380, 195, 410]
+      Value		      "[0.0693, 0.07719675, 0.08469675, 0.0902955, 0.1"
+"0103775, 0.1092345, 0.118182, 0.12543975, 0.13178775, 0.13880475, 0.14496975,"
+" 0.15233325, 0.159432, 0.16653, 0.17287875, 0.17995425, 0.1855755, 0.19192425"
+", 0.196773, 0.201621, 0.20721975, 0.2113185, 0.2145, 0.21726525, 0.219864, 0."
+"22275, 0.225, 0.22575, 0.22725, 0.228, 0.228, 0.22875, 0.2295, 0.231, 0.23234"
+"85, 0.23514375, 0.23979525, 0.246288, 0.25099275, 0.25809075, 0.2653185, 0.27"
+"6864, 0.28990875, 0.30818925, 0.33350025, 0.36259125, 0.39262125, 0.42140175,"
+" 0.4332045, 0.44025, 0.43540125, 0.41272725, 0.36203025, 0.31630275, 0.279613"
+"5, 0.26124975, 0.251235, 0.24038625, 0.23107575, 0.219129, 0.2079315, 0.19699"
+"275, 0.186288, 0.17659125, 0.16764375, 0.160947, 0.15200025, 0.14305275, 0.13"
+"4106, 0.12365925, 0.112818, 0.102015, 0.09156825, 0.0811215, 0.071499225, 0.0"
+"625818, 0.05482425, 0.048875025, 0.04371135, 0.0394977, 0.03598485, 0.0324408"
+"75, 0.029602275, 0.027505275, 0.025715925, 0.0238515, 0.022134075, 0.02052952"
+"5, 0.019149975, 0.017545425, 0.0164523, 0.01548255, 0.014587875, 0.0137682, 0"
+".01287345, 0.012353775, 0.01180455, 0.011394675, 0.011025, 0.010725]"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "AlfaLoss"
+      Position		      [130, 616, 225, 644]
+      Value		      "0.007"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "All Terms"
+      Ports		      [1]
+      Position		      [820, 294, 850, 326]
+      Floating		      off
+      Location		      [631, 407, 955, 646]
+      Open		      off
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData6"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Bononi"
+      Ports		      [1]
+      Position		      [555, 374, 585, 406]
+      Floating		      off
+      Location		      [188, 311, 512, 550]
+      Open		      off
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData4"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "DeltaFreq (1/s)"
+      Position		      [15, 515, 195, 545]
+      Value		      "[2.283E+11, 2.27797E+11, 2.27295E+11, 2.26796E+"
+"11, 2.26298E+11, 2.25801E+11, 2.25306E+11, 2.24813E+11, 2.24322E+11, 2.23832E"
+"+11, 2.23343E+11, 2.22857E+11, 2.22372E+11, 2.21888E+11, 2.21406E+11, 2.20926"
+"E+11, 2.20447E+11, 2.1997E+11, 2.19494E+11, 2.1902E+11, 2.18547E+11, 2.18076E"
+"+11, 2.17606E+11, 2.17138E+11, 2.16672E+11, 2.16206E+11, 2.15743E+11, 2.15281"
+"E+11, 2.1482E+11, 2.14361E+11, 2.13903E+11, 2.13447E+11, 2.12992E+11, 2.12539"
+"E+11, 2.12087E+11, 2.11637E+11, 2.11188E+11, 2.1074E+11, 2.10294E+11, 2.09849"
+"E+11, 2.09406E+11, 2.08964E+11, 2.08524E+11, 2.08085E+11, 2.07647E+11, 2.0721"
+"1E+11, 2.06776E+11, 2.06342E+11, 2.0591E+11, 2.05479E+11, 2.05049E+11, 2.0462"
+"1E+11, 2.04194E+11, 2.03769E+11, 2.03345E+11, 2.02922E+11, 2.025E+11, 2.0208E"
+"+11, 2.01661E+11, 2.01243E+11, 2.00827E+11, 2.00412E+11, 1.99998E+11, 1.99586"
+"E+11, 1.99175E+11, 1.98765E+11, 1.98356E+11, 1.97949E+11, 1.97542E+11, 1.9713"
+"8E+11, 1.96734E+11, 1.96331E+11, 1.9593E+11, 1.9553E+11, 1.95132E+11, 1.94734"
+"E+11, 1.94338E+11, 1.93943E+11, 1.93549E+11, 1.93156E+11, 1.92765E+11, 1.9237"
+"4E+11, 1.91985E+11, 1.91597E+11, 1.9121E+11, 1.90825E+11, 1.9044E+11, 1.90057"
+"E+11, 1.89675E+11, 1.89294E+11, 1.88914E+11, 1.88536E+11, 1.88158E+11, 1.8778"
+"2E+11, 1.87406E+11, 1.87032E+11, 1.86659E+11, 1.86287E+11, 1.85916E+11, 1.855"
+"47E+11]"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux"
+      Ports		      [1, 3]
+      Position		      [530, 96, 535, 134]
+      BackgroundColor	      "black"
+      ShowName		      off
+      Outputs		      "3"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Gamma (1/m)"
+      Position		      [15, 321, 160, 349]
+      Value		      "[0.0681, 0.302, 0.279]"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Gamma ASE(1/m)"
+      Position		      [15, 440, 195, 470]
+      Value		      "[0.011775, 0.014049225, 0.016114425, 0.0172341,"
+" 0.020796975, 0.022974225, 0.02325, 0.0261576, 0.029272725, 0.033096825, 0.03"
+"57924, 0.0382917, 0.040834125, 0.0445773, 0.049015875, 0.053379525, 0.0573356"
+"25, 0.061356825, 0.064765875, 0.06814695, 0.072263625, 0.0778185, 0.0826665, "
+"0.08676525, 0.09075, 0.094962, 0.09975, 0.10315875, 0.1080075, 0.11210625, 0."
+"11620425, 0.121803, 0.12590175, 0.13074975, 0.1363485, 0.14364375, 0.15204525"
+", 0.160644, 0.16973475, 0.1794315, 0.1910685, 0.207114, 0.22429575, 0.2466892"
+"5, 0.27683325, 0.31220475, 0.349962, 0.38890875, 0.41363625, 0.43447725, 0.43"
+"95, 0.42743175, 0.39353025, 0.355212, 0.321477, 0.30549975, 0.3015, 0.3003862"
+"5, 0.29782575, 0.2951895, 0.29034075, 0.28523475, 0.278682, 0.27204525, 0.267"
+"94725, 0.2645985, 0.26049975, 0.25565175, 0.247803, 0.23615925, 0.223068, 0.2"
+"092725, 0.193977, 0.1771815, 0.161136, 0.14584125, 0.13204575, 0.121083, 0.11"
+"213625, 0.1039395, 0.09799275, 0.091773, 0.08625, 0.0828255, 0.0802275, 0.076"
+"87875, 0.07374315, 0.071090925, 0.068600025, 0.065765925, 0.063054525, 0.0611"
+"15175, 0.05938185, 0.0581364, 0.056121975, 0.054075, 0.05281365, 0.051053775,"
+" 0.049189425, 0.047325]"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "L (m)"
+      Position		      [15, 276, 110, 304]
+      Value		      "20"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      DiscretePulseGenerator
+      Name		      "ModulatedChannel"
+      Position		      [25, 113, 70, 147]
+      PulseType		      "Time-based"
+      Amplitude		      "0.0018"
+      Period		      "0.0005"
+      PulseWidth	      "50"
+      PhaseDelay	      "0"
+      SampleTime	      "1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "ModulatedOut"
+      Ports		      [1]
+      Position		      [645, 174, 675, 206]
+      Floating		      off
+      Location		      [212, 381, 536, 620]
+      Open		      off
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      Grid		      "on"
+      TimeRange		      "0.05"
+      YMin		      "0"
+      YMax		      "0.1"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux"
+      Ports		      [2, 1]
+      Position		      [795, 301, 800, 339]
+      ShowName		      off
+      Inputs		      "2"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux1"
+      Ports		      [3, 1]
+      Position		      [185, 46, 190, 84]
+      ShowName		      off
+      Inputs		      "3"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "N2"
+      Ports		      [1]
+      Position		      [575, 254, 605, 286]
+      Floating		      off
+      Location		      [277, 280, 601, 519]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData1"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "PumpOut"
+      Ports		      [1]
+      Position		      [625, 34, 655, 66]
+      Floating		      off
+      Location		      [323, 338, 647, 577]
+      Open		      off
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      Grid		      "on"
+      TimeRange		      "0.05"
+      YMin		      "0"
+      YMax		      "0.08"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData3"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "PumpPowers (W)"
+      Position		      [15, 16, 110, 44]
+      Value		      "0.1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Subsystem"
+      Ports		      [10, 4]
+      Position		      [255, 63, 440, 577]
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      System {
+	Name			"Subsystem"
+	Location		[6, 82, 1001, 722]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	212
+	ScreenColor		"automatic"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Pin (W)"
+	  Position		  [30, 23, 60, 37]
+	  Port			  "1"
+	  LatchInput		  off
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "wavelengths (m)"
+	  Position		  [30, 63, 60, 77]
+	  Port			  "2"
+	  LatchInput		  off
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "alfaSig+Pumps "
+	  Position		  [35, 153, 65, 167]
+	  Port			  "3"
+	  LatchInput		  off
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "L"
+	  Position		  [15, 558, 45, 572]
+	  Port			  "4"
+	  LatchInput		  off
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "gammaSig+Pumps"
+	  Position		  [55, 108, 85, 122]
+	  Port			  "5"
+	  LatchInput		  off
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "alfaASE (1/m)"
+	  Position		  [25, 728, 55, 742]
+	  Port			  "6"
+	  LatchInput		  off
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "gammaASE (1/m)"
+	  Position		  [25, 768, 55, 782]
+	  Port			  "7"
+	  LatchInput		  off
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "DeltaFreq (1/s)"
+	  Position		  [25, 803, 55, 817]
+	  Port			  "8"
+	  LatchInput		  off
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "WavelASE"
+	  Position		  [20, 838, 50, 852]
+	  Port			  "9"
+	  LatchInput		  off
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "alfaLoss"
+	  Position		  [20, 353, 50, 367]
+	  Port			  "10"
+	  LatchInput		  off
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "-1/tau"
+	  Position		  [175, 580, 205, 610]
+	  Gain			  "-100"
+	  Multiplication	  "Element-wise(K.*u)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Math
+	  Name			  "1/ ln(G)"
+	  Ports			  [1, 1]
+	  Position		  [330, 290, 360, 320]
+	  Operator		  "reciprocal"
+	  OutputSignalType	  "auto"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "1/ps"
+	  Position		  [375, 653, 455, 677]
+	  Value			  "1/(3.1416E12)"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "ASELost1"
+	  Ports			  [3, 1]
+	  Position		  [380, 452, 420, 508]
+	  Inputs		  "3"
+	  Multiplication	  "Element-wise(.*)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "ASELost2"
+	  Ports			  [2, 1]
+	  Position		  [475, 652, 515, 708]
+	  Inputs		  "2"
+	  Multiplication	  "Element-wise(.*)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "BononiContr"
+	  Ports			  [1]
+	  Position		  [535, 739, 565, 771]
+	  Floating		  off
+	  Location		  [341, 405, 665, 644]
+	  Open			  on
+	  NumInputPorts		  "1"
+	  TickLabels		  "OneTimeTick"
+	  ZoomMode		  "yonly"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  List {
+	    ListType		    SelectedSignals
+	    axes1		    ""
+	  }
+	  Grid			  "on"
+	  TimeRange		  "auto"
+	  YMin			  "-5"
+	  YMax			  "5"
+	  SaveToWorkspace	  off
+	  SaveName		  "ScopeData8"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "5000"
+	  Decimation		  "1"
+	  SampleInput		  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Calcula Bononi Term"
+	  Ports			  [6, 4]
+	  Position		  [180, 665, 325, 870]
+	  ShowPortLabels	  on
+	  TreatAsAtomicUnit	  off
+	  RTWSystemCode		  "Auto"
+	  RTWFcnNameOpts	  "Auto"
+	  RTWFileNameOpts	  "Auto"
+	  MaskType		  "Bononi Term"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "Calcula Bononi Term"
+	    Location		    [-126, 227, 886, 610]
+	    Open		    on
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "automatic"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "N2"
+	      Position		      [205, 183, 235, 197]
+	      Port		      "1"
+	      LatchInput	      off
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "L"
+	      Position		      [15, 43, 45, 57]
+	      Port		      "2"
+	      LatchInput	      off
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "alfaASE (1/m)"
+	      Position		      [20, 108, 50, 122]
+	      Port		      "3"
+	      LatchInput	      off
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "gammaASE (1/m)"
+	      Position		      [25, 178, 55, 192]
+	      Port		      "4"
+	      LatchInput	      off
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "DeltaFreq (1/s)"
+	      Position		      [525, 243, 555, 257]
+	      Port		      "5"
+	      LatchInput	      off
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "WavelASE"
+	      Position		      [715, 203, 745, 217]
+	      Port		      "6"
+	      LatchInput	      off
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "(1-G) / pSASE"
+	      Position		      [510, 100, 570, 130]
+	      MATLABFcn		      "(1-exp(u))/(3.1416E12)"
+	      OutputDimensions	      "100"
+	      OutputSignalType	      "auto"
+	      Output1D		      off
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "(1-G) / pSLASE"
+	      Ports		      [2, 1]
+	      Position		      [620, 101, 665, 134]
+	      Inputs		      "2"
+	      Multiplication	      "Element-wise(.*)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "(alfa + gamma) ASE* L"
+	      Ports		      [2, 1]
+	      Position		      [330, 116, 375, 149]
+	      Inputs		      "2"
+	      Multiplication	      "Element-wise(.*)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Math
+	      Name		      "1/ln(G)"
+	      Ports		      [1, 1]
+	      Position		      [480, 155, 510, 185]
+	      Operator		      "reciprocal"
+	      OutputSignalType	      "auto"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "4"
+	      Position		      [415, 221, 510, 249]
+	      Value		      "4"
+	      VectorParams1D	      on
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "4nspDeltaFr"
+	      Ports		      [4, 1]
+	      Position		      [590, 203, 635, 237]
+	      Inputs		      "4"
+	      Multiplication	      "Element-wise(.*)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Bononi*PhotonEnergy"
+	      Ports		      [2, 1]
+	      Position		      [890, 121, 935, 154]
+	      Inputs		      "2"
+	      Multiplication	      "Element-wise(.*)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "BononiTerm"
+	      Ports		      [2, 1]
+	      Position		      [770, 146, 815, 179]
+	      Inputs		      "2"
+	      Multiplication	      "Element-wise(.*)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain"
+	      Position		      [960, 120, 990, 150]
+	      Gain		      "-1"
+	      Multiplication	      "Element-wise(K.*u)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Math
+	      Name		      "Math\nFunction2"
+	      Ports		      [1, 1]
+	      Position		      [540, 30, 570, 60]
+	      Operator		      "reciprocal"
+	      OutputSignalType	      "auto"
+	    }
+	    Block {
+	      BlockType		      Math
+	      Name		      "Math\nFunction3"
+	      Ports		      [1, 1]
+	      Position		      [775, 195, 805, 225]
+	      Operator		      "reciprocal"
+	      OutputSignalType	      "auto"
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum4"
+	      Ports		      [2, 1]
+	      Position		      [215, 111, 235, 169]
+	      ShowName		      off
+	      IconShape		      "rectangular"
+	      Inputs		      "++"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum5"
+	      Ports		      [2, 1]
+	      Position		      [435, 91, 455, 149]
+	      ShowName		      off
+	      IconShape		      "rectangular"
+	      Inputs		      "-+"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "alfaASE * L"
+	      Ports		      [2, 1]
+	      Position		      [125, 91, 170, 124]
+	      Inputs		      "2"
+	      Multiplication	      "Element-wise(.*)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "gammaASE * L"
+	      Ports		      [2, 1]
+	      Position		      [120, 156, 165, 189]
+	      Inputs		      "2"
+	      Multiplication	      "Element-wise(.*)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "gammaASE* L* N2 "
+	      Ports		      [2, 1]
+	      Position		      [305, 196, 350, 229]
+	      Inputs		      "2"
+	      Multiplication	      "Element-wise(.*)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "hc"
+	      Position		      [670, 246, 735, 274]
+	      Value		      "1.989E-25"
+	      VectorParams1D	      on
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "photon EnergyASE"
+	      Ports		      [2, 1]
+	      Position		      [875, 196, 920, 229]
+	      Inputs		      "2"
+	      Multiplication	      "Element-wise(.*)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "1 / ln(G)"
+	      Position		      [615, 163, 645, 177]
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "4nspDeltaFreq"
+	      Position		      [675, 328, 705, 342]
+	      Port		      "2"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "ASEPhotons"
+	      Position		      [845, 33, 875, 47]
+	      Port		      "3"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "ASEPowers"
+	      Position		      [955, 58, 985, 72]
+	      Port		      "4"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "alfaASE (1/m)"
+	      SrcPort		      1
+	      DstBlock		      "alfaASE * L"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "gammaASE (1/m)"
+	      SrcPort		      1
+	      Points		      [20, 0; 0, -5]
+	      DstBlock		      "gammaASE * L"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "alfaASE * L"
+	      SrcPort		      1
+	      Points		      [0, 0; 5, 0]
+	      Branch {
+		Points			[5, 0; 0, 15]
+		DstBlock		"Sum4"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -5]
+		DstBlock		"Sum5"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "gammaASE * L"
+	      SrcPort		      1
+	      Points		      [15, 0; 0, -5]
+	      Branch {
+		Points			[0, -15]
+		DstBlock		"Sum4"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, 50]
+		DstBlock		"gammaASE* L* N2 "
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Sum4"
+	      SrcPort		      1
+	      DstBlock		      "(alfa + gamma) ASE* L"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "(alfa + gamma) ASE* L"
+	      SrcPort		      1
+	      DstBlock		      "Sum5"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Sum5"
+	      SrcPort		      1
+	      Points		      [0, 0; 10, 0]
+	      Branch {
+		Points			[20, 0; 0, -5]
+		DstBlock		"(1-G) / pSASE"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 50]
+		DstBlock		"1/ln(G)"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "gammaASE* L* N2 "
+	      SrcPort		      1
+	      DstBlock		      "4nspDeltaFr"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "1/ln(G)"
+	      SrcPort		      1
+	      Points		      [0, 15]
+	      Branch {
+		Points			[0, 20]
+		DstBlock		"4nspDeltaFr"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -15]
+		DstBlock		"1 / ln(G)"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "DeltaFreq (1/s)"
+	      SrcPort		      1
+	      Points		      [5, 0; 0, -15]
+	      DstBlock		      "4nspDeltaFr"
+	      DstPort		      4
+	    }
+	    Line {
+	      SrcBlock		      "4"
+	      SrcPort		      1
+	      Points		      [30, 0; 0, -10]
+	      DstBlock		      "4nspDeltaFr"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "4nspDeltaFr"
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      Branch {
+		Points			[40, 0; 0, -50]
+		DstBlock		"BononiTerm"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, 115]
+		DstBlock		"4nspDeltaFreq"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "BononiTerm"
+	      SrcPort		      1
+	      Points		      [0, 0; 15, 0]
+	      Branch {
+		Points			[10, 0; 0, -35]
+		DstBlock		"Bononi*PhotonEnergy"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -60; -125, 0; 0, -65]
+		DstBlock		"ASEPhotons"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "photon EnergyASE"
+	      SrcPort		      1
+	      Points		      [0, -40; -70, 0; 0, -30]
+	      DstBlock		      "Bononi*PhotonEnergy"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "WavelASE"
+	      SrcPort		      1
+	      DstBlock		      "Math\nFunction3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "hc"
+	      SrcPort		      1
+	      Points		      [100, 0; 0, -40]
+	      DstBlock		      "photon EnergyASE"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Math\nFunction3"
+	      SrcPort		      1
+	      Points		      [25, 0; 0, -5]
+	      DstBlock		      "photon EnergyASE"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "(1-G) / pSASE"
+	      SrcPort		      1
+	      Points		      [5, 0; 0, 10]
+	      DstBlock		      "(1-G) / pSLASE"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "(1-G) / pSLASE"
+	      SrcPort		      1
+	      Points		      [40, 0; 0, 35]
+	      DstBlock		      "BononiTerm"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "L"
+	      SrcPort		      1
+	      Points		      [10, 25]
+	      Branch {
+		Points			[10, 25; 15, 0]
+		Branch {
+		  DstBlock		  "alfaASE * L"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [0, 65]
+		  DstBlock		  "gammaASE * L"
+		  DstPort		  1
+		}
+	      }
+	      Branch {
+		Points			[0, -30]
+		DstBlock		"Math\nFunction2"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "N2"
+	      SrcPort		      1
+	      Points		      [0, -15; 25, 0]
+	      Branch {
+		Points			[0, -50]
+		DstBlock		"(alfa + gamma) ASE* L"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 30]
+		DstBlock		"gammaASE* L* N2 "
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Math\nFunction2"
+	      SrcPort		      1
+	      Points		      [15, 0; 0, 65]
+	      DstBlock		      "(1-G) / pSLASE"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Bononi*PhotonEnergy"
+	      SrcPort		      1
+	      Points		      [0, -5]
+	      DstBlock		      "Gain"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain"
+	      SrcPort		      1
+	      Points		      [0, -45; -55, 0]
+	      DstBlock		      "ASEPowers"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "ChanLostContr"
+	  Ports			  [1]
+	  Position		  [685, 414, 715, 446]
+	  Floating		  off
+	  Location		  [392, 258, 716, 497]
+	  Open			  on
+	  NumInputPorts		  "1"
+	  TickLabels		  "OneTimeTick"
+	  ZoomMode		  "yonly"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  List {
+	    ListType		    SelectedSignals
+	    axes1		    ""
+	  }
+	  Grid			  "on"
+	  TimeRange		  "auto"
+	  YMin			  "-5"
+	  YMax			  "5"
+	  SaveToWorkspace	  off
+	  SaveName		  "ScopeData11"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "5000"
+	  Decimation		  "1"
+	  SampleInput		  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  DiscreteIntegrator
+	  Name			  "Discrete-Time\nIntegrator"
+	  Ports			  [1, 1]
+	  Position		  [100, 510, 135, 550]
+	  IntegratorMethod	  "ForwardEuler"
+	  ExternalReset		  "none"
+	  InitialConditionSource  "internal"
+	  InitialCondition	  "0.7"
+	  LimitOutput		  off
+	  UpperSaturationLimit	  "inf"
+	  LowerSaturationLimit	  "-inf"
+	  ShowSaturationPort	  off
+	  ShowStatePort		  off
+	  SampleTime		  "-1"
+	  RTWStateStorageClass	  "Auto"
+	  Port {
+	    PortNumber		    1
+	    Name		    "normalized excited state population N2"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "PumpSigLost"
+	  Ports			  [4, 1]
+	  Position		  [410, 330, 450, 385]
+	  Inputs		  "4"
+	  Multiplication	  "Element-wise(.*)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "PumpSigLostSum"
+	  Position		  [480, 345, 540, 375]
+	  MATLABFcn		  "sum(u)"
+	  OutputDimensions	  "1"
+	  OutputSignalType	  "auto"
+	  Output1D		  on
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "Sum"
+	  Position		  [440, 465, 500, 495]
+	  MATLABFcn		  "sum(u)"
+	  OutputDimensions	  "1"
+	  OutputSignalType	  "auto"
+	  Output1D		  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  Ports			  [2, 1]
+	  Position		  [520, 466, 540, 524]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "++"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum3"
+	  Ports			  [5, 1]
+	  Position		  [635, 565, 655, 625]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "+++++"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "Sum4"
+	  Position		  [535, 675, 595, 705]
+	  MATLABFcn		  "sum(u)"
+	  OutputDimensions	  "1"
+	  OutputSignalType	  "auto"
+	  Output1D		  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum6"
+	  Ports			  [2, 1]
+	  Position		  [865, 386, 885, 444]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "++"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "SumASEPhotons"
+	  Position		  [400, 740, 460, 770]
+	  MATLABFcn		  "sum(u)"
+	  OutputDimensions	  "1"
+	  OutputSignalType	  "auto"
+	  Output1D		  on
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "SumASEPowers"
+	  Position		  [685, 665, 745, 695]
+	  MATLABFcn		  "sum(u)"
+	  OutputDimensions	  "1"
+	  OutputSignalType	  "auto"
+	  Output1D		  on
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "SumASEPowers1"
+	  Position		  [550, 120, 610, 150]
+	  MATLABFcn		  "sum(u)"
+	  OutputDimensions	  "1"
+	  OutputSignalType	  "auto"
+	  Output1D		  on
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "SumChannels"
+	  Position		  [525, 180, 585, 210]
+	  MATLABFcn		  "sum(u)"
+	  OutputDimensions	  "1"
+	  OutputSignalType	  "auto"
+	  Output1D		  on
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "YSunContr"
+	  Ports			  [1]
+	  Position		  [660, 199, 690, 231]
+	  Floating		  off
+	  Location		  [365, 359, 689, 598]
+	  Open			  on
+	  NumInputPorts		  "1"
+	  TickLabels		  "OneTimeTick"
+	  ZoomMode		  "yonly"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  List {
+	    ListType		    SelectedSignals
+	    axes1		    ""
+	  }
+	  Grid			  "on"
+	  TimeRange		  "auto"
+	  YMin			  "-5"
+	  YMax			  "5"
+	  SaveToWorkspace	  off
+	  SaveName		  "ScopeData7"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "5000"
+	  Decimation		  "1"
+	  SampleInput		  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "YSunTerms"
+	  Ports			  [6, 3]
+	  Position		  [165, 23, 305, 257]
+	  ShowPortLabels	  on
+	  TreatAsAtomicUnit	  off
+	  RTWSystemCode		  "Auto"
+	  RTWFcnNameOpts	  "Auto"
+	  RTWFileNameOpts	  "Auto"
+	  System {
+	    Name		    "YSunTerms"
+	    Location		    [26, 336, 981, 728]
+	    Open		    on
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "automatic"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Pin (W)"
+	      Position		      [35, 28, 65, 42]
+	      Port		      "1"
+	      LatchInput	      off
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "wavelengths (m)"
+	      Position		      [35, 128, 65, 142]
+	      Port		      "2"
+	      LatchInput	      off
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "gamma"
+	      Position		      [25, 298, 55, 312]
+	      Port		      "3"
+	      LatchInput	      off
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "alfa "
+	      Position		      [25, 213, 55, 227]
+	      Port		      "4"
+	      LatchInput	      off
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "L"
+	      Position		      [25, 248, 55, 262]
+	      Port		      "5"
+	      LatchInput	      off
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "N2"
+	      Position		      [140, 345, 170, 360]
+	      Orientation	      "up"
+	      Port		      "6"
+	      LatchInput	      off
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "(1-G) / pS"
+	      Position		      [345, 195, 405, 225]
+	      MATLABFcn		      "(1-exp(u))/(3.1416E12)"
+	      OutputDimensions	      "3"
+	      OutputSignalType	      "auto"
+	      Output1D		      off
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "(1-G) / pSL"
+	      Ports		      [2, 1]
+	      Position		      [425, 226, 470, 259]
+	      Inputs		      "2"
+	      Multiplication	      "Element-wise(.*)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "(alfa + gamma) * L"
+	      Ports		      [2, 1]
+	      Position		      [215, 286, 260, 319]
+	      Inputs		      "2"
+	      Multiplication	      "Element-wise(.*)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "1 / photon Energy"
+	      Ports		      [2, 1]
+	      Position		      [210, 106, 255, 139]
+	      Inputs		      "2"
+	      Multiplication	      "Element-wise(.*)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Scope
+	      Name		      "Gain"
+	      Ports		      [1]
+	      Position		      [460, 319, 490, 351]
+	      Floating		      off
+	      Location		      [292, 513, 616, 752]
+	      Open		      off
+	      NumInputPorts	      "1"
+	      TickLabels	      "OneTimeTick"
+	      ZoomMode		      "on"
+	      List {
+		ListType		AxesTitles
+		axes1			"%<SignalLabel>"
+	      }
+	      List {
+		ListType		SelectedSignals
+		axes1			""
+	      }
+	      Grid		      "on"
+	      TimeRange		      "auto"
+	      YMin		      "-5"
+	      YMax		      "5"
+	      SaveToWorkspace	      off
+	      SaveName		      "ScopeData2"
+	      DataFormat	      "StructureWithTime"
+	      LimitDataPoints	      on
+	      MaxDataPoints	      "5000"
+	      Decimation	      "1"
+	      SampleInput	      off
+	      SampleTime	      "0"
+	    }
+	    Block {
+	      BlockType		      Math
+	      Name		      "Math\nFunction"
+	      Ports		      [1, 1]
+	      Position		      [130, 65, 160, 95]
+	      Operator		      "reciprocal"
+	      OutputSignalType	      "auto"
+	    }
+	    Block {
+	      BlockType		      Math
+	      Name		      "Math\nFunction1"
+	      Ports		      [1, 1]
+	      Position		      [695, 110, 725, 140]
+	      Operator		      "reciprocal"
+	      OutputSignalType	      "auto"
+	    }
+	    Block {
+	      BlockType		      Math
+	      Name		      "Math\nFunction2"
+	      Ports		      [1, 1]
+	      Position		      [360, 250, 390, 280]
+	      Operator		      "reciprocal"
+	      OutputSignalType	      "auto"
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Pin / PhotonEnergy"
+	      Ports		      [2, 1]
+	      Position		      [305, 55, 350, 90]
+	      Inputs		      "2"
+	      Multiplication	      "Element-wise(.*)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Pout * PhotonEnergy"
+	      Ports		      [2, 1]
+	      Position		      [785, 110, 830, 145]
+	      Inputs		      "2"
+	      Multiplication	      "Element-wise(.*)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum"
+	      Ports		      [2, 1]
+	      Position		      [295, 236, 315, 294]
+	      ShowName		      off
+	      IconShape		      "rectangular"
+	      Inputs		      "-+"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum1"
+	      Ports		      [2, 1]
+	      Position		      [690, 26, 710, 84]
+	      ShowName		      off
+	      IconShape		      "rectangular"
+	      Inputs		      "+-"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum2"
+	      Ports		      [2, 1]
+	      Position		      [170, 251, 190, 309]
+	      ShowName		      off
+	      IconShape		      "rectangular"
+	      Inputs		      "++"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Y.SunTerm"
+	      Ports		      [2, 1]
+	      Position		      [505, 176, 550, 209]
+	      Inputs		      "2"
+	      Multiplication	      "Element-wise(.*)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "alfa * L"
+	      Ports		      [2, 1]
+	      Position		      [85, 211, 130, 244]
+	      Inputs		      "2"
+	      Multiplication	      "Element-wise(.*)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "gamma * L"
+	      Ports		      [2, 1]
+	      Position		      [90, 271, 135, 304]
+	      Inputs		      "2"
+	      Multiplication	      "Element-wise(.*)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "hc\n"
+	      Position		      [30, 71, 95, 99]
+	      Value		      "1.989E-25"
+	      VectorParams1D	      on
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "pSL"
+	      Ports		      [2, 1]
+	      Position		      [635, 216, 680, 249]
+	      Inputs		      "2"
+	      Multiplication	      "Element-wise(.*)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "ps"
+	      Position		      [580, 183, 610, 217]
+	      Gain		      "3.1416E12"
+	      Multiplication	      "Element-wise(K.*u)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "YSunPowers"
+	      Position		      [855, 215, 885, 230]
+	      Orientation	      "down"
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "YSunContributions"
+	      Position		      [685, 308, 715, 322]
+	      Port		      "2"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "ln(G)"
+	      Position		      [355, 353, 385, 367]
+	      Port		      "3"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "Y.SunTerm"
+	      SrcPort		      1
+	      Points		      [0, 5; 10, 0]
+	      Branch {
+		DstBlock		"ps"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 115]
+		DstBlock		"YSunContributions"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "alfa * L"
+	      SrcPort		      1
+	      Points		      [0, 0; 20, 0]
+	      Branch {
+		Labels			[3, 0]
+		Points			[65, 0; 0, -5; 60, 0]
+		DstBlock		"Sum"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"Sum2"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "(alfa + gamma) * L"
+	      SrcPort		      1
+	      Points		      [0, -25]
+	      DstBlock		      "Sum"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Sum"
+	      SrcPort		      1
+	      Points		      [5, 0; 0, 20; 5, 0]
+	      Branch {
+		DstBlock		"(1-G) / pS"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 50]
+		Branch {
+		  DstBlock		  "Gain"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [0, 25]
+		  DstBlock		  "ln(G)"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Pin (W)"
+	      SrcPort		      1
+	      Points		      [55, 0; 0, 5; 165, 0]
+	      DstBlock		      "Pin / PhotonEnergy"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Sum1"
+	      SrcPort		      1
+	      Points		      [55, 0]
+	      DstBlock		      "Pout * PhotonEnergy"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "alfa "
+	      SrcPort		      1
+	      DstBlock		      "alfa * L"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "L"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      Branch {
+		Points			[0, -20]
+		DstBlock		"alfa * L"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, 25]
+		DstBlock		"gamma * L"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[280, 0]
+		Branch {
+		  DstBlock		  "Math\nFunction2"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [0, 40; 275, 0]
+		  DstBlock		  "pSL"
+		  DstPort		  2
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "gamma"
+	      SrcPort		      1
+	      Points		      [0, -10]
+	      DstBlock		      "gamma * L"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "gamma * L"
+	      SrcPort		      1
+	      Points		      [0, 5]
+	      DstBlock		      "Sum2"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Sum2"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      DstBlock		      "(alfa + gamma) * L"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Pin / PhotonEnergy"
+	      SrcPort		      1
+	      Points		      [0, -35; 35, 0]
+	      Branch {
+		DstBlock		"Sum1"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 145]
+		DstBlock		"Y.SunTerm"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "hc\n"
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      DstBlock		      "Math\nFunction"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "wavelengths (m)"
+	      SrcPort		      1
+	      Points		      [5, 0; 0, -5]
+	      DstBlock		      "1 / photon Energy"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Math\nFunction"
+	      SrcPort		      1
+	      Points		      [5, 0; 0, 35]
+	      DstBlock		      "1 / photon Energy"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "1 / photon Energy"
+	      SrcPort		      1
+	      Points		      [0, 0; 10, 0]
+	      Branch {
+		Points			[0, -45]
+		DstBlock		"Pin / PhotonEnergy"
+		DstPort			2
+	      }
+	      Branch {
+		DstBlock		"Math\nFunction1"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Math\nFunction1"
+	      SrcPort		      1
+	      Points		      [0, 15; 40, 0]
+	      DstBlock		      "Pout * PhotonEnergy"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "(1-G) / pS"
+	      SrcPort		      1
+	      DstBlock		      "(1-G) / pSL"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Math\nFunction2"
+	      SrcPort		      1
+	      Points		      [0, -15]
+	      DstBlock		      "(1-G) / pSL"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "(1-G) / pSL"
+	      SrcPort		      1
+	      Points		      [0, -45]
+	      DstBlock		      "Y.SunTerm"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "N2"
+	      SrcPort		      1
+	      Points		      [45, 0]
+	      DstBlock		      "(alfa + gamma) * L"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Pout * PhotonEnergy"
+	      SrcPort		      1
+	      Points		      [35, 0]
+	      DstBlock		      "YSunPowers"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "ps"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      DstBlock		      "pSL"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pSL"
+	      SrcPort		      1
+	      Points		      [0, -60; -10, 0]
+	      DstBlock		      "Sum1"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "YSunPowers"
+	  Position		  [690, 48, 720, 62]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "N2"
+	  Position		  [265, 523, 295, 537]
+	  Port			  "2"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Bononi (W)"
+	  Position		  [780, 673, 810, 687]
+	  Port			  "3"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Pout (W)"
+	  Position		  [925, 233, 955, 247]
+	  Port			  "4"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  Name			  "normalized excited state population N2"
+	  SrcBlock		  "Discrete-Time\nIntegrator"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, 5]
+	  Branch {
+	    Points		    [0, 60]
+	    Branch {
+	      Points		      [0, 85]
+	      DstBlock		      "Calcula Bononi Term"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "-1/tau"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    Points		    [65, 0]
+	    Branch {
+	      Points		      [-65, 0; 0, -295]
+	      DstBlock		      "YSunTerms"
+	      DstPort		      6
+	    }
+	    Branch {
+	      Points		      [30, 0]
+	      DstBlock		      "N2"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Sum3"
+	  SrcPort		  1
+	  Points		  [0, 45; -585, 0; 0, -110]
+	  DstBlock		  "Discrete-Time\nIntegrator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum6"
+	  SrcPort		  1
+	  Points		  [0, -175]
+	  DstBlock		  "Pout (W)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "SumASEPowers"
+	  SrcPort		  1
+	  Points		  [0, 0; 10, 0]
+	  Branch {
+	    Points		    [0, -250]
+	    DstBlock		    "Sum6"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "Bononi (W)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "SumASEPowers1"
+	  SrcPort		  1
+	  Points		  [235, 0]
+	  DstBlock		  "Sum6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Calcula Bononi Term"
+	  SrcPort		  4
+	  Points		  [340, 0]
+	  DstBlock		  "SumASEPowers"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "alfaASE (1/m)"
+	  SrcPort		  1
+	  Points		  [105, 0]
+	  DstBlock		  "Calcula Bononi Term"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "gammaASE (1/m)"
+	  SrcPort		  1
+	  Points		  [105, 0]
+	  DstBlock		  "Calcula Bononi Term"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "DeltaFreq (1/s)"
+	  SrcPort		  1
+	  Points		  [105, 0]
+	  DstBlock		  "Calcula Bononi Term"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "WavelASE"
+	  SrcPort		  1
+	  Points		  [110, 0]
+	  DstBlock		  "Calcula Bononi Term"
+	  DstPort		  6
+	}
+	Line {
+	  SrcBlock		  "Pin (W)"
+	  SrcPort		  1
+	  Points		  [85, 0]
+	  DstBlock		  "YSunTerms"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "wavelengths (m)"
+	  SrcPort		  1
+	  Points		  [85, 0]
+	  DstBlock		  "YSunTerms"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "alfaSig+Pumps "
+	  SrcPort		  1
+	  DstBlock		  "YSunTerms"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "L"
+	  SrcPort		  1
+	  Points		  [0, -5; 15, 0]
+	  Branch {
+	    Points		    [0, 155]
+	    DstBlock		    "Calcula Bononi Term"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, -105]
+	    Branch {
+	      Points		      [0, -80]
+	      Branch {
+		Points			[0, -175]
+		DstBlock		"YSunTerms"
+		DstPort			5
+	      }
+	      Branch {
+		Points			[0, 5]
+		DstBlock		"PumpSigLost"
+		DstPort			4
+	      }
+	    }
+	    Branch {
+	      Points		      [0, 25]
+	      DstBlock		      "ASELost1"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "gammaSig+Pumps"
+	  SrcPort		  1
+	  Points		  [0, 5]
+	  DstBlock		  "YSunTerms"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "YSunTerms"
+	  SrcPort		  1
+	  Points		  [210, 0; 0, 20]
+	  Branch {
+	    Points		    [0, 55]
+	    DstBlock		    "SumASEPowers1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -25]
+	    DstBlock		    "YSunPowers"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "SumChannels"
+	  SrcPort		  1
+	  Points		  [0, 20; 5, 0]
+	  Branch {
+	    Labels		    [1, 0]
+	    Points		    [0, 360]
+	    DstBlock		    "Sum3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "YSunContr"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "YSunTerms"
+	  SrcPort		  2
+	  Points		  [0, 55; 80, 0]
+	  Branch {
+	    DstBlock		    "SumChannels"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 140]
+	    DstBlock		    "PumpSigLost"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "YSunTerms"
+	  SrcPort		  3
+	  Points		  [5, 0]
+	  DstBlock		  "1/ ln(G)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "1/ ln(G)"
+	  SrcPort		  1
+	  Points		  [5, 0; 0, 45]
+	  DstBlock		  "PumpSigLost"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "-1/tau"
+	  SrcPort		  1
+	  DstBlock		  "Sum3"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "alfaLoss"
+	  SrcPort		  1
+	  Points		  [0, 5]
+	  DstBlock		  "PumpSigLost"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "PumpSigLost"
+	  SrcPort		  1
+	  DstBlock		  "PumpSigLostSum"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "PumpSigLostSum"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, 55]
+	  Branch {
+	    Points		    [0, 170]
+	    DstBlock		    "Sum3"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "ChanLostContr"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "1/ps"
+	  SrcPort		  1
+	  DstBlock		  "ASELost2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ASELost1"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "Sum1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ASELost2"
+	  SrcPort		  1
+	  DstBlock		  "Sum4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum4"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, -35; -90, 0; 0, -100; -25, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "SumASEPhotons"
+	  SrcPort		  1
+	  Points		  [25, 0]
+	  Branch {
+	    DstBlock		    "BononiContr"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -140]
+	    DstBlock		    "Sum3"
+	    DstPort		    5
+	  }
+	}
+	Line {
+	  SrcBlock		  "Calcula Bononi Term"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -235]
+	  DstBlock		  "ASELost1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Calcula Bononi Term"
+	  SrcPort		  2
+	  Points		  [50, 0; 0, -50]
+	  DstBlock		  "ASELost2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Calcula Bononi Term"
+	  SrcPort		  3
+	  Points		  [25, 0; 0, -40; 10, 0]
+	  Branch {
+	    DstBlock		    "SumASEPhotons"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "ASELost1"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  Points		  [70, 0; 0, 110]
+	  DstBlock		  "Sum3"
+	  DstPort		  4
+	}
+      }
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "SurverChannel"
+      Position		      [15, 66, 110, 94]
+      Value		      "0.0006"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "SurverChannelOut"
+      Ports		      [1]
+      Position		      [655, 99, 685, 131]
+      Floating		      off
+      Location		      [229, 160, 553, 399]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      Grid		      "on"
+      TimeRange		      "0.05"
+      YMin		      "0"
+      YMax		      "0.08"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData9"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "SurverChanneldBm"
+      Ports		      [1]
+      Position		      [825, 139, 855, 171]
+      Floating		      off
+      Location		      [229, 160, 553, 399]
+      Open		      off
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      Grid		      "on"
+      TimeRange		      "0.05"
+      YMin		      "0"
+      YMax		      "0.08"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData12"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "ThreeChannels"
+      Ports		      [1]
+      Position		      [530, 184, 560, 216]
+      Floating		      off
+      Location		      [398, 465, 722, 704]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      Grid		      "on"
+      TimeRange		      "0.05"
+      YMin		      "0"
+      YMax		      "0.1"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData10"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace"
+      Position		      [805, 215, 865, 245]
+      VariableName	      "pow"
+      MaxDataPoints	      "inf"
+      Decimation	      "1"
+      SampleTime	      "-1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      MATLABFcn
+      Name		      "To dBm"
+      Position		      [720, 135, 780, 165]
+      MATLABFcn		      "10*log10(1000*u)"
+      OutputDimensions	      "1"
+      OutputSignalType	      "auto"
+      Output1D		      on
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Total"
+      Ports		      [1]
+      Position		      [580, 489, 610, 521]
+      Floating		      off
+      Location		      [103, 459, 427, 698]
+      Open		      off
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData5"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "WavelASE (nm)"
+      Position		      [15, 565, 195, 595]
+      Value		      "(1E-9)*[1450, 1451.6, 1453.2, 1454.8, 1456.4, 1"
+"458, 1459.6, 1461.2, 1462.8, 1464.4, 1466, 1467.6, 1469.2, 1470.8, 1472.4, 14"
+"74, 1475.6, 1477.2, 1478.8, 1480.4, 1482, 1483.6, 1485.2, 1486.8, 1488.4, 149"
+"0, 1491.6, 1493.2, 1494.8, 1496.4, 1498, 1499.6, 1501.2, 1502.8, 1504.4, 1506"
+", 1507.6, 1509.2, 1510.8, 1512.4, 1514, 1515.6, 1517.2, 1518.8, 1520.4, 1522,"
+" 1523.6, 1525.2, 1526.8, 1528.4, 1530, 1531.6, 1533.2, 1534.8, 1536.4, 1538, "
+"1539.6, 1541.2, 1542.8, 1544.4, 1546, 1547.6, 1549.2, 1550.8, 1552.4, 1554, 1"
+"555.6, 1557.2, 1558.8, 1560.4, 1562, 1563.6, 1565.2, 1566.8, 1568.4, 1570, 15"
+"71.6, 1573.2, 1574.8, 1576.4, 1578, 1579.6, 1581.2, 1582.8, 1584.4, 1586, 158"
+"7.6, 1589.2, 1590.8, 1592.4, 1594, 1595.6, 1597.2, 1598.8, 1600.4, 1602, 1603"
+".6, 1605.2, 1606.8, 1608.4]"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "wavelengths (m)"
+      Position		      [15, 173, 155, 207]
+      Value		      "1E-9*[1480, 1539.6, 1549.2]"
+      VectorParams1D	      on
+    }
+    Line {
+      SrcBlock		      "Subsystem"
+      SrcPort		      1
+      Points		      [0, -25; 20, 0; 0, 10]
+      Branch {
+	Points			[0, 200]
+	DstBlock		"Mux"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 5; 35, 0]
+	Branch {
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [0, 85]
+	  DstBlock		  "ThreeChannels"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Subsystem"
+      SrcPort		      2
+      Points		      [115, 0]
+      DstBlock		      "N2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Alfa (1/m)"
+      SrcPort		      1
+      Points		      [0, -50]
+      DstBlock		      "Subsystem"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "L (m)"
+      SrcPort		      1
+      Points		      [90, 0; 0, -45]
+      DstBlock		      "Subsystem"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "Gamma (1/m)"
+      SrcPort		      1
+      Points		      [0, -40]
+      DstBlock		      "Subsystem"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "wavelengths (m)"
+      SrcPort		      1
+      Points		      [0, -45]
+      DstBlock		      "Subsystem"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Gamma ASE(1/m)"
+      SrcPort		      1
+      Points		      [0, -30; 40, 0]
+      DstBlock		      "Subsystem"
+      DstPort		      7
+    }
+    Line {
+      SrcBlock		      "DeltaFreq (1/s)"
+      SrcPort		      1
+      Points		      [15, 0; 0, -85]
+      DstBlock		      "Subsystem"
+      DstPort		      8
+    }
+    Line {
+      SrcBlock		      "Alfa ASE(1/m)"
+      SrcPort		      1
+      Points		      [25, 0; 0, -50]
+      DstBlock		      "Subsystem"
+      DstPort		      6
+    }
+    Line {
+      SrcBlock		      "WavelASE (nm)"
+      SrcPort		      1
+      Points		      [20, 0; 0, -85]
+      DstBlock		      "Subsystem"
+      DstPort		      9
+    }
+    Line {
+      SrcBlock		      "Subsystem"
+      SrcPort		      3
+      Points		      [0, -25; 45, 0]
+      Branch {
+	Points			[0, 30]
+	DstBlock		"Bononi"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -30]
+	DstBlock		"Mux"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Subsystem"
+      SrcPort		      4
+      Points		      [55, 0; 0, -10]
+      DstBlock		      "Total"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Mux"
+      SrcPort		      1
+      DstBlock		      "All Terms"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "AlfaLoss"
+      SrcPort		      1
+      Points		      [0, -85]
+      DstBlock		      "Subsystem"
+      DstPort		      10
+    }
+    Line {
+      SrcBlock		      "PumpPowers (W)"
+      SrcPort		      1
+      Points		      [55, 0]
+      DstBlock		      "Mux1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "SurverChannel"
+      SrcPort		      1
+      Points		      [25, 0; 0, -15]
+      DstBlock		      "Mux1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "ModulatedChannel"
+      SrcPort		      1
+      Points		      [95, 0]
+      DstBlock		      "Mux1"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Mux1"
+      SrcPort		      1
+      Points		      [20, 0; 0, 30]
+      DstBlock		      "Subsystem"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      1
+      Points		      [35, 0; 0, -55]
+      DstBlock		      "PumpOut"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      2
+      Points		      [80, 0]
+      Branch {
+	DstBlock		"SurverChannelOut"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 35]
+	DstBlock		"To dBm"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      3
+      Points		      [65, 0; 0, 65]
+      DstBlock		      "ModulatedOut"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "To dBm"
+      SrcPort		      1
+      Points		      [5, 0]
+      Branch {
+	Points			[5, 0; 0, 5]
+	DstBlock		"SurverChanneldBm"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"To Workspace"
+	DstPort			1
+      }
+    }
+  }
+}

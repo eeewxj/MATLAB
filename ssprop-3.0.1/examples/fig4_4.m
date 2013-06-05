@@ -1,0 +1,68 @@
+clear;close all;clc;
+T = 200;                                % time window (period)
+nt = 2^14;                              % number of points
+dt = T/nt;                              % timestep (dt)
+t = ((1:nt)'-(nt+1)/2)*dt;              % time vector
+w = wspace(T,nt);                       % angular frequency vector
+vs = fftshift(w/(2*pi));                % shifted for plotting
+
+z = 4.5*pi;                             % distance
+nz = 100;
+%for Guassian pulse
+u0 = gaussian(t,0,2*sqrt(log(2)));
+% Note:  only one step (nz=1) is required:
+u = ssrklem(u0,dt,z/nz,z,0,0,1,0);
+%u = sspropc(u0,dt,z/nz,nz,0,0,1,0,3e-15);
+U = fftshift(abs(dt*ifft(u)*nt/sqrt(2*pi)).^2);
+
+
+figure;                                 %
+subplot(1,2,1);
+plot(t,abs(u).^2);
+subplot(1,2,2);
+plot (vs,U);
+xlim([-5 5]);
+xlabel ('(\nu-\nu_0) T_0');
+ylabel ('|U(z,\nu)|^2/P_0');
+title ('SPM Pulse Spectrum, Gaussian Pulse (m=1,C=0,\phi = 4.5\pi)');
+
+% figure;                                 %plot the SPM-induced phase shift 
+% phi = unwrap(angle(u));
+% subplot(1,2,1);
+% plot(t,phi);
+% axis([-5 5 -inf inf]);
+% xlabel('T/T_0');
+% ylabel('\phi_N_L');
+% subplot(1,2,2);
+% plot(t,-gradient(phi)./gradient(t));
+% axis([-5 5 -20 20]);
+% xlabel('T/T_0');
+% ylabel('-\partial\phi_N_L/\partialT');
+
+
+
+%for super-Guassian pulse
+% u0 = gaussian(t,0,2*sqrt(log(2)),1,3);
+% [u]= ssprop(u0,dt,z,1,0,0,1);
+% U = fftshift(abs(dt*ifft(u)*nt/sqrt(2*pi)).^2);
+% 
+% figure;
+% plot (vs,U);
+% xlim([-6 6]);
+% xlabel ('(\nu-\nu_0) T_0');
+% ylabel ('|U(z,\nu)|^2/P_0');
+% title ('SPM Pulse Spectrum, Gaussian Pulse (m=3,C=0,\phi = 4.5\pi)');
+% 
+% figure;                                 %plot the SPM-induced phase shift 
+% xlimit = 1.7;
+% phi = unwrap(angle(u));
+% subplot(1,2,1);
+% plot(t,phi);
+% xlim([-xlimit xlimit]);
+% xlabel('T/T_0');
+% ylabel('\phi_N_L');
+% subplot(1,2,2);
+% plot(t,-gradient(phi)./gradient(t));
+% xlim([-xlimit xlimit]);
+% xlabel('T/T_0');
+% ylabel('-\partial\phi_N_L/\partialT');

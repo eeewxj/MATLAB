@@ -1,0 +1,55 @@
+clear;close all;clc;
+T = 32;                                 % time window (period)
+nt = 2^10;                              % number of points
+dt = T/nt;                              % timestep (dt)
+t = ((1-nt)/2:(nt-1)/2)*dt;             % time vector
+
+dz = 1;                            		% total distance per step
+nz = 4;                                 % total number of steps
+
+betap = [0,0,1];						% dispersion polynomial
+gamma = 0;
+u = zeros(length(t),nz+1);
+
+u(:,1) = gaussian(t,0,2*sqrt(log(2)),1,1);
+tic;
+for ii = 1:nz
+  %u(:,ii+1) = ssprop(u(:,ii),dt,dz,1,0,betap,gamma,10,1e-4);  
+  %u(:,ii+1) = sspropv(u(:,ii),u(:,ii),dt,dz,1,0,0,betap,betap,gamma);
+end
+toc;
+ann_string = cell(size(u,2),1);
+for i = 1:size(u,2)
+   ann_string{i} = ['z/L_D = ',num2str(i-1)];
+end
+
+figure;
+plot(t,abs(u).^2);
+xlim([-8 8]);
+xlabel ('(t-\beta_1z)/T_0');
+ylabel ('|u(z,t)|^2/P_0');
+legend(ann_string);
+
+figure;
+omega = wspace(t);
+subplot(2,1,1);
+plot(fftshift(omega)./(2*pi), fftshift(abs(dt*ifft(u)*nt/sqrt(2*pi)).^2));
+axis([-5 5 0 inf]);
+xlabel('\omega');
+ylabel('|u(\omega)|^2/P_0');
+subplot(2,1,2);
+pu =  unwrap(angle(fftshift((dt*ifft(u)*nt/sqrt(2*pi)))));
+plot(fftshift(omega)./(2*pi), pu(:,1:2));
+hold on;
+plot(fftshift(omega)./(2*pi), pu(:,2)-pu(:,1),'--r');
+axis([-1 1 -inf inf]);
+xlabel('\omega');
+legend('\phi(0,\omega)','\phi(L_D,\omega)','\phi(L_D,\omega)-\phi(0,\omega)')
+
+figure;
+[~,phi] = gradient(unwrap(angle(u)));
+plot(t,-phi./repmat(gradient(omega),1,size(u,2)));
+axis([-5 5 -1 1]);
+legend(ann_string);
+xlabel('T/T_0');
+ylabel('-\partial\phi/\partialT');
